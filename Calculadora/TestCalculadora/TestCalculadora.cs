@@ -30,5 +30,16 @@ namespace TestCalculadora
             //Assert: comprobacion de los resultados
             Assert.AreEqual(60, resultado);
         }
+        [TestMethod]
+        public void Test_Multiplicacion()  
+          {
+            //Arrange: incializar las variables
+            int sumando1 = 10;
+            int sumando2 = 5;
+            //Act: ejecucion del metodo a probar
+            int resultado = CalculadoraEjemplo.CalculadoraEjemplo.Multiplicacion(sumando1, sumando2);
+            //Assert: comprobacion de los resultados
+            Assert.AreEqual(50, resultado);
+        }
     }
 }
