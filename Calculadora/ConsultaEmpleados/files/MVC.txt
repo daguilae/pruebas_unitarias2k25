@@ -1,0 +1,35 @@
+/////////librerias////////
+using System.Data;
+using System.Data.Odbc;
+/////////////////////////
+
+// obtener datos de una tabla CAPA MODELO
+
+ public OdbcDataAdapter llenarTbl(string tabla)// metodo  que obtinene el contenio de una tabla
+        {
+            //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
+            string sql = "SELECT * FROM "+ tabla +"  ;";
+OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, con.conexion());
+            return dataTable;
+        }
+
+// LLenar una tabla CAPA CONTROLADOR
+
+
+     public DataTable llenarTbl(string tabla)  
+        {
+            OdbcDataAdapter dt = sn.llenarTbl(tabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+//Mostrar los datos CAPA VISTA
+
+
+      public void actualizardatagriew()
+        {
+            DataTable dt = cn.llenarTbl(tabla);
+            /*nombre del datagrid*/.DataSource = dt;
+           
+        }
