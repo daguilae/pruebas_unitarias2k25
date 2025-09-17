@@ -11,15 +11,13 @@ using CapaControladorEmpleados;
 
 namespace CapaVistaEmpleados
 {
-
-    public partial class FormEmpleados : Form
+    public partial class CapaVistaEmpleados : UserControl
     {
         // Instancia del controlador
         Capa_Controlador_Empleados cn = new Capa_Controlador_Empleados();
-        public FormEmpleados()
+        public CapaVistaEmpleados()
         {
             InitializeComponent();
-            
         }
 
         private void Btn_Agregar_Empleados_Click(object sender, EventArgs e)
@@ -29,7 +27,7 @@ namespace CapaVistaEmpleados
 
         public void Pro_actualizardatagriew()
         {
-            DataTable dt = cn.llenarTbl("NombreTabla");
+            DataTable dt = cn.llenarTbl("empleados");
             Dgv_Empleados.DataSource = dt;
 
         }
