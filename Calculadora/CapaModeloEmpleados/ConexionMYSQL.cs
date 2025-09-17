@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaModeloEmpleados
 {
-    internal class ConexionMYSQL
+    public class ConexionMYSQL
     {
         public OdbcConnection conexion()
         {

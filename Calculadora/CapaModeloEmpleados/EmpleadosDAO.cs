@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaModeloEmpleados
 {
-    internal class EmpleadosDAO
+    public class EmpleadosDAO
     {
         ConexionMYSQL con = new ConexionMYSQL();
         public OdbcDataAdapter llenarTbl(string tabla)// metodo  que obtinene el contenio de una tabla

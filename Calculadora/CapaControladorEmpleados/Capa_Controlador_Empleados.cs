@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.Odbc;
+using CapaModeloEmpleados;
 
 namespace CapaControladorEmpleados
 {
-    internal class Capa_Controlador_Empleados
+    public class Capa_Controlador_Empleados
     {
-        // LLenar una tabla CAPA CONTROLADOR
-
+        EmpleadosDAO sn = new EmpleadosDAO();
 
         public DataTable llenarTbl(string tabla)
         {
