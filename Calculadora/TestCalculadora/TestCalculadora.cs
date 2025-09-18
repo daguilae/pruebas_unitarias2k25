@@ -41,5 +41,18 @@ namespace TestCalculadora
             //Assert: comprobacion de los resultados
             Assert.AreEqual(50, resultado);
         }
+
+
+        [TestMethod]
+        public void Test_Resta()
+        {
+            //Arrange: incializar las variables
+            int minuendo1 = 17;
+            int sustraendo2 = 7;
+            //Act: ejecucion del metodo a probar
+            int resultado = CalculadoraEjemplo.CalculadoraEjemplo.Resta(minuendo1, sustraendo2);
+            //Assert: comprobacion de los resultados
+            Assert.AreEqual(10, resultado);
+        }
     }
 }
